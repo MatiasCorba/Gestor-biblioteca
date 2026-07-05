@@ -38,15 +38,12 @@ while accion > 0 and accion < 5:
                     elif gestion==3:
                         break
 
-                    gestion=int(input("Desea hacer alguna otra cosa:\n 1. Prestar libro\n 2. Devolver libro"))
-
                 except ValueError:
                     print("Por favor seleccione el numero de la accion que desea realizar")
 
         elif accion==4:
             print("Hasta pronto!")
-
-        accion=int(input("Desea hacer alguna otra cosa:\n 1. Añadir libro\n 2. Añadir usuario\n 3. Gestionar prestamos\n 4. Finalizar gestion"))
+            break
 
     except ValueError:
         print("Por favor seleccione el numero de la accion que desea realizar")
