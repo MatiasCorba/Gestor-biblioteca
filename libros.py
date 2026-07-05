@@ -20,12 +20,10 @@ def buscar_libro(libro,inventario):
     
 
 def generar_id(inventario):
-    ids=sorted(id for id in inventario)
-
-    if not ids:
-        new_id=1
-    
-    new_id=ids[-1]+1
+    if inventario:
+       new_id=max(inventario)+1
+    else:
+       new_id=1
     
     return new_id
     
