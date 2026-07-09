@@ -6,7 +6,7 @@ Aplicación desarrollada en Python para administrar el inventario de una bibliot
 __Estado:__ En desarrollo
 
 ## <u>Historia y Objetivos</u>
-Este proyecto forma parte de mis primeros trabajos de desarrollo y tiene como objetivo acompañar mi formación como desarrollador Full Stack. Planeo ampliarlo y mejorarlo a medida que adquiera nuevos conocimientos durante el máster
+Este proyecto forma parte de mis primeros trabajos de desarrollo y tiene como objetivo acompañar mi formación como desarrollador Full Stack. Planeo ampliarlo y mejorarlo a medida que adquiera nuevos conocimientos durante el máster  
 __<u>Objetivos:</u>__
 - Practica de python
 - Aplicar programación modular
@@ -41,7 +41,7 @@ __V1.0:__
 
 ## <u>Autor</u>
 
-__Nombre:__ Matias David Corba
+__Nombre:__ Matias David Corba  
 __Info Personal:__ Estudiante del master de desarrollador full-stack de la académia Conquer Blocks.
 
 
