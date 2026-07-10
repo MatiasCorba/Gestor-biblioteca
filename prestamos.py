@@ -18,12 +18,10 @@ def prestar_libro(registro_usuarios,dni,inventario,libro):
     return
     
 
-
 def devolver_libro(registro_usuarios,dni,inventario,libro):
     busqueda=libros.buscar_libro(inventario=inventario,libro=libro)
     usuario=usuarios.buscar_usuario(dni=dni,registro_usuarios=registro_usuarios)
 
-    
     if busqueda and usuario:
         if busqueda in usuario["prestados"]:
            usuario["prestados"].remove(busqueda)

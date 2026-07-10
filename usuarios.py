@@ -35,6 +35,7 @@ def eliminar_usuario(dni,registro_usuarios):
            print("El usuario ha sido eliminado del registro")
            return
         print("El usuario no puede ser eliminado porque aun cuenta con libros prestados")
+        return
     
     print(f"El dni {dni} no se encuentra registrado como usuario")
     return

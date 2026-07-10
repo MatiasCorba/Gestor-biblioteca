@@ -6,13 +6,13 @@ registro_usuarios={}
 accion=1
 while accion > 0 and accion < 5:
     try:
-        accion=int(input(" 1. Gestionar libros\n 2. Añadir usuario\n 3. Gestionar prestamos\n 4. Finalizar gestion\nQue desea hacer: "))
+        accion=int(input(" 1. Gestionar libros\n 2. Gestionar usuarios\n 3. Gestionar prestamos\n 4. Finalizar gestion\nQue desea hacer: "))
         if accion==1:
            
            gestion_libro=1
            while gestion_libro > 0 and accion < 5:
                try:
-                   gestion_libro=int(input("1. Añadir libro\n 2. Eliminar libro\n 3. Listar libros\n 4. Volver al menu anteriror\nQue desea hacer: "))
+                   gestion_libro=int(input(" 1. Añadir libro\n 2. Eliminar libro\n 3. Listar libros\n 4. Volver al menu anteriror\nQue desea hacer: "))
                    
                    if gestion_libro==1:
                        nombre=input("Ingrese el nombre del libro: ")
@@ -37,9 +37,9 @@ while accion > 0 and accion < 5:
         elif accion==2:
 
             gestion_usuario=1
-            while gestion_libro > 0 and accion < 5:
+            while gestion_usuario > 0 and accion < 5:
                try:
-                   gestion_usuario=int(input("1. Añadir usuario\n 2. Eliminar usuario\n 3. Listar usuarios\n 4. Volver al menu anteriror\nQue desea hacer: "))
+                   gestion_usuario=int(input(" 1. Añadir usuario\n 2. Eliminar usuario\n 3. Listar usuarios\n 4. Volver al menu anteriror\nQue desea hacer: "))
                    
                    if gestion_usuario==1:
                        nombre=input("Ingrese su nombre: ")
