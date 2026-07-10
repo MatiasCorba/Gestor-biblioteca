@@ -27,7 +27,15 @@ def generar_id(inventario):
     
     return new_id
     
-
+def listar_libros(inventario):
+    if inventario:
+        print("Nuestros libros:")
+        for id,libro in inventario.keys():
+            print(f"ID={id}\nLibro:{libro["titulo"]}\nAutor:{libro["autor"]}\nAño de publicacion:{libro["año"]}\nGenero:{libro["genero"]}")
+            print("-------------------------")
+        return
+    print("No hay libros registrados")
+    
 
         
 
