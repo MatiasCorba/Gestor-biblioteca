@@ -35,6 +35,16 @@ def listar_libros(inventario):
             print("-------------------------")
         return
     print("No hay libros registrados")
+
+def eliminar_libro(libro,inventario):
+    busqueda=buscar_libro(libro=libro,inventario=inventario)
+    if inventario and busqueda:
+        inventario.remove(busqueda)
+        print(f"El libro {libro} ha sido borrado del inventario.")
+        return
+    
+    return
+
     
 
         

@@ -20,8 +20,9 @@ while accion > 0 and accion < 5:
                        inventario=libros.agregar_inventario(libro=nombre,autor=autor,año=año,genero=genero,inventario=inventario)
                    
                    elif gestion_libro==2:
+                       libro=input("Ingrese el nombre del libro que desea borrar: ")
+                       libros.eliminar_libro(libro=libro,inventario=inventario)
                                    
-           
                    elif gestion_libro==3:
                         libros.listar_libros(inventario)
 
