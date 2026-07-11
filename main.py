@@ -3,14 +3,14 @@ import libros,usuarios,prestamos
 inventario={}
 registro_usuarios={}
 
-accion=1
-while accion > 0 and accion < 5:
+gestion=1
+while gestion > 0 and gestion < 5:
     try:
-        accion=int(input(" 1. Gestionar libros\n 2. Gestionar usuarios\n 3. Gestionar prestamos\n 4. Finalizar gestion\nQue desea hacer: "))
-        if accion==1:
+        gestion=int(input(" 1. Gestionar libros\n 2. Gestionar usuarios\n 3. Gestionar prestamos\n 4. Finalizar gestion\nQue desea hacer: "))
+        if gestion==1:
            
            gestion_libro=1
-           while gestion_libro > 0 and accion < 5:
+           while gestion_libro > 0 and gestion_libro < 5:
                try:
                    gestion_libro=int(input(" 1. Añadir libro\n 2. Eliminar libro\n 3. Listar libros\n 4. Volver al menu anteriror\nQue desea hacer: "))
                    
@@ -34,7 +34,7 @@ while accion > 0 and accion < 5:
                except ValueError:
                    print("Por favor seleccione el numero de la accion que desea realizar")
                    
-        elif accion==2:
+        elif gestion==2:
 
             gestion_usuario=1
             while gestion_usuario > 0 and accion < 5:
@@ -60,29 +60,29 @@ while accion > 0 and accion < 5:
                except ValueError:
                    print("Por favor seleccione el numero de la accion que desea realizar")
             
-        elif accion==3:
+        elif gestion==3:
             
-            gestion=1
-            while gestion > 0 and gestion < 4:
+            gestion_prestamo=1
+            while gestion_prestamo > 0 and gestion_prestamo < 4:
                 try:
-                    gestion=int(input(" 1. Prestar libro\n 2. Devolver libro\n 3. Volver al menu anterior\nQue desea hacer: "))
-                    if gestion==1:
+                    gestion_prestamo=int(input(" 1. Prestar libro\n 2. Devolver libro\n 3. Volver al menu anterior\nQue desea hacer: "))
+                    if gestion_prestamo==1:
                         libro=input("Indique el nombre del libro a prestar: ")
                         dni=input("Indique DNI del usuario: ")
                         prestamos.prestar_libro(dni=dni,libro=libro,registro_usuarios=registro_usuarios,inventario=inventario)
                         
-                    elif gestion==2:
+                    elif gestion_prestamo==2:
                         libro=input("Indique el nombre del libro a devolver: ")
                         dni=input("Indique DNI del usuario: ")
                         prestamos.devolver_libro(dni=dni,libro=libro,registro_usuarios=registro_usuarios,inventario=inventario)
 
-                    elif gestion==3:
+                    elif gestion_prestamo==3:
                         break
 
                 except ValueError:
                     print("Por favor seleccione el numero de la accion que desea realizar")
 
-        elif accion==4:
+        elif gestion==4:
             print("Hasta pronto!")
             break
 

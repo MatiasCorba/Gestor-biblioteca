@@ -50,6 +50,42 @@ def eliminar_libro(libro,inventario):
     
     return
 
+def buscar_por_atributo(inventario, autor=None, año=None, genero=None):
+    libros=[]
+    if not inventario:
+        print("No hay libros registrados")
+        return
+    
+    if autor:
+       for id,info_libro in inventario.items():
+           if info_libro["autor"]==autor and zip(id,info_libro) not in libros:
+               libros.append(zip(id,info_libro))
+
+    if genero:
+       for id,info_libro in inventario.items():
+           if info_libro["autor"]==genero and zip(id,info_libro) not in libros:
+               libros.append(zip(id,info_libro))
+
+    if año:
+       for id,info_libro in inventario.items():
+           if info_libro["autor"]==año and zip(id,info_libro) not in libros:
+               libros.append(zip(id,info_libro))
+
+    if not libros:
+        print("No hay libros ingresados de este autor")
+        return
+
+    for id,libro in libros:       
+        print(f"ID={id}\nLibro:{libro["titulo"]}\nAutor:{libro["autor"]}\nAño de publicacion:{libro["año"]}\nGenero:{libro["genero"]}")
+        print("-------------------------")
+        return
+
+
+
+        
+        
+            
+
     
 
         
