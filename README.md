@@ -19,6 +19,12 @@ __V1.0:__
 - Git
 - GitHub
 
+__V1.1:__ 
+- Python
+- Git
+- GitHub
+
+
 ## <u>Funcionalidades</u>
 __V1.0:__
 - Registrar libros
@@ -26,7 +32,25 @@ __V1.0:__
 - Gestionar prestamos
 - Devolver libros
 
+__V1.1:__
+- Registrar y eliminar libros
+- Registrar y eliminar usuarios
+- Gestionar prestamos y devoluciones
+- Listar todos los libros
+- Listar libros disponibles y prestados
+- Buscar libros por autor, genero y año (con combinacion de filtros)
+- Listar usuarios y sus prestamos
+
+
 ## <u>Estructura del proyecto</u>
+__V1.0:__
+- Biblioteca/
+  - main.py
+  - libros.py
+  - usuarios.py
+  - prestamos.py
+
+__V1.1:__
 - Biblioteca/
   - main.py
   - libros.py
