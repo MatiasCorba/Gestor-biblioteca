@@ -26,17 +26,6 @@ def generar_id(inventario):
        new_id=1
     
     return new_id
-    
-def listar_libros(inventario):
-    if not inventario:
-        print("No hay libros registrados")
-        return
-    print("Nuestros libros:")
-    for id,libro in inventario.items():
-        print(f"ID={id}\nLibro:{libro["titulo"]}\nAutor:{libro["autor"]}\nAño de publicacion:{libro["año"]}\nGenero:{libro["genero"]}")
-        print("-------------------------")
-    return
-    
 
 def eliminar_libro(libro,inventario):
     busqueda=buscar_libro(libro=libro,inventario=inventario)
@@ -50,35 +39,38 @@ def eliminar_libro(libro,inventario):
     
     return
 
-def buscar_por_atributo(inventario, autor=None, año=None, genero=None):
-    libros=[]
+def buscar_por_atributo(inventario, autor=None, año=None, genero=None, disponibilidad=None):
     if not inventario:
         print("No hay libros registrados")
         return
     
-    if autor:
-       for id,info_libro in inventario.items():
-           if info_libro["autor"]==autor and zip(id,info_libro) not in libros:
-               libros.append(zip(id,info_libro))
-
-    if genero:
-       for id,info_libro in inventario.items():
-           if info_libro["autor"]==genero and zip(id,info_libro) not in libros:
-               libros.append(zip(id,info_libro))
-
-    if año:
-       for id,info_libro in inventario.items():
-           if info_libro["autor"]==año and zip(id,info_libro) not in libros:
-               libros.append(zip(id,info_libro))
-
+    libros=[]
+    for id,info_libro in inventario.items():
+        if disponibilidad==True:
+            if info_libro["disponibilidad"]!=disponibilidad:
+                continue
+        if disponibilidad==False:
+            if info_libro["disponibilidad"]!=disponibilidad:
+                continue
+        if autor:
+            if info_libro["autor"]!=autor:
+                continue
+        if año:
+            if info_libro["año"]!=año:
+                continue
+        if genero:
+            if info_libro["genero"]!=genero:
+                continue
+        libros.append((id,info_libro))
+    
     if not libros:
-        print("No hay libros ingresados de este autor")
+        print("No se encontaron resultados para su busqueda")
         return
 
     for id,libro in libros:       
         print(f"ID={id}\nLibro:{libro["titulo"]}\nAutor:{libro["autor"]}\nAño de publicacion:{libro["año"]}\nGenero:{libro["genero"]}")
         print("-------------------------")
-        return
+    return
 
 
 
