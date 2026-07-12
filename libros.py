@@ -1,5 +1,8 @@
 def agregar_inventario(libro,autor,año,genero,inventario):
     id=generar_id(inventario)
+    libro=libro.lower()
+    autor=autor.lower()
+    genero=genero.lower()
     
     inventario[id]={"titulo":libro,
                        "autor":autor,
@@ -28,7 +31,9 @@ def generar_id(inventario):
     return new_id
 
 def eliminar_libro(libro,inventario):
+    libro=libro.lower()
     busqueda=buscar_libro(libro=libro,inventario=inventario)
+    
     if busqueda:
         if inventario[busqueda]["disponibilidad"]:
             inventario.pop(busqueda)

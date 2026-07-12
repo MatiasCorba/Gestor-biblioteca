@@ -16,7 +16,7 @@ while gestion > 0 and gestion < 5:
                    
                    if gestion_libro==1:
                        nombre=input("Ingrese el nombre del libro: ")
-                       autor=input("ingrese nombre del autor del libro: ")
+                       autor=input("Ingrese nombre del autor del libro: ")
                        año=input("Ingrese año de publicacion del libro: ")
                        genero=input("Ingrese el genero del libro: ")
                        inventario=libros.agregar_inventario(libro=nombre,autor=autor,año=año,genero=genero,inventario=inventario)
@@ -86,7 +86,7 @@ while gestion > 0 and gestion < 5:
                                                     continue
                                                 
                                                 autor=None
-                                                print("Filtro eliminado")
+                                                print("Filtro de autor eliminado")
 
                                             elif filtro==5:
                                                 if not año:
@@ -94,7 +94,7 @@ while gestion > 0 and gestion < 5:
                                                     continue
                                                 
                                                 año=None
-                                                print("Filtro eliminado")
+                                                print("Filtro de año de publicacion eliminado")
 
                                             elif filtro==6:
                                                 if not genero:
@@ -102,7 +102,7 @@ while gestion > 0 and gestion < 5:
                                                     continue
                                                 
                                                 genero=None
-                                                print("Filtro eliminado")
+                                                print("Filtro de genero eliminado")
 
                                             elif filtro==7:
                                                break
@@ -135,13 +135,13 @@ while gestion > 0 and gestion < 5:
                    gestion_usuario=int(input(" 1. Añadir usuario\n 2. Eliminar usuario\n 3. Listar usuarios\n 4. Volver al menu anteriror\nQue desea hacer: "))
                    
                    if gestion_usuario==1:
-                       nombre=input("Ingrese su nombre: ")
-                       apellido=input("Ingrese su apellido: ")
-                       dni=input("Ingrese su dni: ")
+                       nombre=input("Ingrese nombre del usuario: ")
+                       apellido=input("Ingrese apellido del usuario: ")
+                       dni=input("Ingrese dni del usuario: ")
                        registro_usuarios=usuarios.registrar_usuario(nombre=nombre,apellido=apellido,dni=dni,registro_usuarios=registro_usuarios)
                    
                    elif gestion_usuario==2:
-                       dni=input("Ingrese el dni del usuario: ")
+                       dni=input("Ingrese dni del usuario: ")
                        usuarios.eliminar_usuario(dni=dni,registro_usuarios=registro_usuarios)
                                    
                    elif gestion_usuario==3:
