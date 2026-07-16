@@ -1,16 +1,15 @@
-import libros,usuarios,prestamos,menus
+import libros,usuarios,prestamos,menus,persistencia
 
-inventario={}
-registro_usuarios={}
+inventario=persistencia.cargar_inventario()
+registro_usuarios=persistencia.cargar_registro_usuarios()
 
 while True:
     gestion=menus.menu_principal()
     
     if gestion==1:
         
-        menu=" 1. Añadir libro\n 2. Eliminar libro\n 3. Buscar libros\n 4. Volver al menu anteriror\nQue desea hacer: "
         while True:
-            gestion_libro=menus.menu_libros
+            gestion_libro=menus.menu_libros()
             if gestion_libro==1:
                 nombre=input("Ingrese el nombre del libro: ")
                 autor=input("Ingrese nombre del autor del libro: ")
@@ -25,7 +24,7 @@ while True:
             elif gestion_libro==3:
 
                 while True:
-                    gestion_busqueda=menus.menu_busqueda
+                    gestion_busqueda=menus.menu_busqueda()
 
                     if gestion_busqueda==1:
                         print("Nuestros libros:")
@@ -154,6 +153,9 @@ while True:
     elif gestion==4:
         print("Hasta pronto!")
         break
+
+persistencia.guardar_inventario(inventario)
+persistencia.guardar_registro_usuarios(registro_usuarios)
 
 
 
