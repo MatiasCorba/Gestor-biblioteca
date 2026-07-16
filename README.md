@@ -24,6 +24,10 @@ __V1.1:__
 - Git
 - GitHub
 
+__V1.2:__ 
+- Python
+- Git
+- GitHub
 
 ## <u>Funcionalidades</u>
 __V1.0:__
@@ -41,6 +45,16 @@ __V1.1:__
 - Buscar libros por autor, genero y año (con combinacion de filtros)
 - Listar usuarios y sus prestamos
 
+__V1.2:__
+- Registrar y eliminar libros
+- Registrar y eliminar usuarios
+- Gestionar prestamos y devoluciones
+- Listar todos los libros
+- Listar libros disponibles y prestados
+- Buscar libros por autor, genero y año (con combinacion de filtros)
+- Listar usuarios y sus prestamos
+- Persistencia de datos mediante funcionalidad JSON
+
 
 ## <u>Estructura del proyecto</u>
 __V1.0:__
@@ -57,8 +71,17 @@ __V1.1:__
   - usuarios.py
   - prestamos.py
 
+__V1.1:__
+- Biblioteca/
+  - main.py
+  - libros.py
+  - usuarios.py
+  - prestamos.py
+  - menus.py
+  - persistencia.py
+  - datos/
+
 ## <u>Próximas mejoras</u>
-- Persistencia con json
 - Base de datos SQLite
 - Interfaz web
 - API REST
